@@ -1,11 +1,17 @@
-<h3 class="pb-sm-3">login works!</h3>
-
-<div>
-    <ng-template #myTemplate></ng-template>
-</div>
-
-<div>
-    <button type="button" class="btn btn-primary" (click)="lazyLoadComponent()">Registration</button>
-</div>
+<section class="container">
+<form class="form-signin" [formGroup]="formLogin" (ngSubmit)="submitForm()">
+    <h3 class="pb-sm-3">Please sign in</h3>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" [formControlName]="'email'">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" [formControlName]="'password'">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!formLogin.valid">Login</button>
+  </form>
+</section>
 
 

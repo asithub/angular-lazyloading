@@ -1,0 +1,21 @@
+<section>
+    <form class="form-register" [formGroup]="formRegister" (ngSubmit)="onSubmit()">
+        <h3 class="pb-sm-3">New registration</h3>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" [formControlName]="'name'">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" [formControlName]="'email'">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" [formControlName]="'password'">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!formRegister.valid">Registration</button>
+        <section class="auth-reg mt-4">
+            Existing user? <button type="button" class="btn btn-link" [routerLink]="['/auth']">Login</button>
+        </section>
+    </form>
+</section>

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 export class PrivacyComponent implements OnInit {
 
   constructor() {
-    console.warn('loaded Privacy componet');
+    // console.warn('loaded Privacy componet');
   }
 
   ngOnInit(): void {
