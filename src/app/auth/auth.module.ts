@@ -28,7 +28,6 @@ import { TokeninterceptorService } from './../shared/services/tokeninterceptor.s
     HttpClientModule
   ],
   providers: [
-    AuthService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokeninterceptorService,

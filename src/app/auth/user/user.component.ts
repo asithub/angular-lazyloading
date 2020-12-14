@@ -19,4 +19,10 @@ export class UserComponent implements OnInit {
     });
   }
 
+  deleteUser(id): void{
+    this.authService.deleteUser(id).subscribe(res => {
+      console.log(res);
+    });
+  }
+
 }

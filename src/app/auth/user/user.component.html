@@ -5,6 +5,7 @@
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
+            <th scope="col" class="action">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -12,6 +13,10 @@
             <th scope="row">{{i+1}}</th>
             <td>{{item.name}}</td>
             <td>{{item.email}}</td>
+            <td class="action">
+              <button class="btn btn-primary btn-sm" (click)="editUser()">Edit</button>
+              <button class="btn btn-danger btn-sm" (click)="deleteUser(item._id)">Delete</button>
+            </td>
           </tr>
         </tbody>
       </table>
